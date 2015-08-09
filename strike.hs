@@ -1,5 +1,5 @@
-import Data.Foldable
-
 main = interact strike
 
-strike = concat . (map  $ \c -> [c, '\822'])
+strike string = do
+    char <- string
+    [char, '\822']
